@@ -1,0 +1,46 @@
+{
+  "name": "naoesquenta",
+  "productName": "Não Esquenta!",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.4",
+    "@fortawesome/free-solid-svg-icons": "^5.3.1",
+    "@fortawesome/react-fontawesome": "^0.1.2",
+    "bootstrap": "^4.1.3",
+    "extract-zip": "^1.6.7",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.4",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-scripts": "1.1.5"
+  },
+  "build": {
+    "nsis": {
+      "artifactName": "InstaladorNaoEsquentaPogChamp.exe"
+    },
+    "extraResources": [
+      "extraFiles/**"
+    ]
+  },
+  "postinstall": "electron-builder install-app-deps",
+  "main": "./public/electron.js",
+  "homepage": "./",
+  "scripts": {
+    "start": "cross-env BROWSER=none react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "electron": "electron .",
+    "electron-dev": "cross-env ENV_DEV=true  ELECTRON_START_URL=http://localhost:3000 electron .",
+    "dev": "concurrently \"npm start\" \"wait-on http://localhost:3000 && npm run electron-dev\"",
+    "deploy": "react-scripts build && electron-builder"
+  },
+  "devDependencies": {
+    "concurrently": "^4.0.1",
+    "cross-env": "^5.2.0",
+    "electron": "^2.0.8",
+    "electron-builder": "^20.28.3",
+    "wait-on": "^3.0.1"
+  }
+}

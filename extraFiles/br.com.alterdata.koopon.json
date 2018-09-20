@@ -1,0 +1,9 @@
+{
+	"name": "br.com.alterdata.koopon",
+	"description": "Host para comunicação com a DLL de integração com o NFeasy",
+	"path": "nfeasy_host.bat",
+	"type": "stdio",
+	"allowed_origins": [
+		"chrome-extension://blhoghondadgalibnakpeejiifoplfoc/"
+	]
+}
