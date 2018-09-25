@@ -70,9 +70,6 @@ class App extends Component {
         return this._descompactaExtensao();
       })
       .then(() => {
-        return this._ajustaIdExtensaoDll();
-      })
-      .then(() => {
         this.setState({
           status: "Recarregue a extensão no seu navegador e está pronto para uso!",
           carregado: true
@@ -133,6 +130,8 @@ class App extends Component {
     })
   }
 
+
+  //TODO: Verificar uma maneira de pegar o ID da instalação e atualizar no JSON automaticamente
   _ajustaIdExtensaoDll() {
     return new Promise((resolve, reject) => {
       this.setState({

@@ -1,7 +1,7 @@
 {
   "name": "naoesquenta",
   "productName": "Não Esquenta!",
-  "version": "0.0.1",
+  "version": "0.1.2",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.4",
@@ -17,7 +17,7 @@
   },
   "build": {
     "nsis": {
-      "artifactName": "InstaladorNaoEsquentaPogChamp.exe"
+      "artifactName": "InstaladorNaoEsquentaPogChamp0.1.2.exe"
     },
     "extraResources": [
       "extraFiles/**"
